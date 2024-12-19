@@ -1,11 +1,11 @@
-// Fetch the recipe data from db.json and handle CRUD operations
+// Fetching recipe from db.json and handling crud
 
-let recipes = [];
-const recipeList = document.getElementById('recipeList');
-const recipeFormContainer = document.getElementById('recipeFormContainer');
-const recipeForm = document.getElementById('recipeForm');
-const closeFormBtn = document.getElementById('closeFormBtn');
-const addRecipeBtn = document.getElementById('addRecipeBtn');
+let Recipes = [];
+const RecipeList = document.getElementById('recipeList');
+const RecipeFormContainer = document.getElementById('recipeFormContainer');
+const RecipeForm = document.getElementById('recipeForm');
+const CloseFormBtn = document.getElementById('closeFormBtn');
+const AddRecipeBtn = document.getElementById('addRecipeBtn');
 
 // Fetch recipes from db.json (for mock data, replace this with actual fetching)
 fetch('db.json')
@@ -70,7 +70,7 @@ recipeForm.addEventListener('submit', (e) => {
 });
 
 // Edit Recipe
-function editRecipe(id) {
+function RecipeEdit(id) {
     const recipe = recipes.find(r => r.id === id);
     if (recipe) {
         document.getElementById('formTitle').textContent = 'Edit Recipe';
