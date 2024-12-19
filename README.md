@@ -1,7 +1,7 @@
 # RECIPE PLANNER
 This is a simple web application to manage and plan recipes, shopping lists, and meal plans. This app allows users to create, save, and organize their recipes, as well as create a weekly meal plan with corresponding shopping lists.
 
-Live link : 
+Live link : https://shadrack8018.github.io/Tast-Creations/
 
 ## Features
 Recipe Management: Add, edit, and view recipes with ingredients, cooking steps, and cooking time.
