@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTY CREATIONS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <h1>TASTY CREATIONS</h1>
+        </div>
+        <div id="header-right">
+            <button id="addRecipeBtn">Add Recipe</button>
+            <button id="plan-recipes-btn" onclick="window.location.href='plan.html'">Plan Recipes</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="recipeList" class="recipe-list">
+            <!-- Recipe list will be displayed here -->
+        </div>
+    </main>
+
+    <!-- Recipe Form Container -->
+    <div id="recipeFormContainer" class="recipe-form-container">
+        <h2 id="formTitle">Add a New Recipe</h2>
+        <form id="recipeForm">
+            <input type="text" id="recipeName" placeholder="Recipe Name" required>
+            <input type="text" id="recipeIngredients" placeholder="Ingredients (comma separated)" required>
+            <textarea id="recipeSteps" placeholder="Cooking Steps" required></textarea>
+            <input type="number" id="recipeTime" placeholder="Cooking Time (minutes)" required>
+            <button type="submit">Submit</button>
+            <button type="button" id="closeFormBtn">Close</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

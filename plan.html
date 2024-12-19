@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTY CREATIONS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .section {
+        width: 45%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+    
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    button {
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 5px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    button:disabled {
+        background-color: #ddd;
+    }
+    
+    #back-to-recipes-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background-color: #2196F3;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>TASTY CREATIONS</h1>
+    </header>
+
+    <div class="container">
+        <!-- Left Section (Shopping List) -->
+        <div class="section" id="shopping-list-section">
+            <h2>SHOPPING LIST</h2>
+            <table id="shopping-list-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Amount (Ksh)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Shopping list items will go here -->
+                </tbody>
+            </table>
+            <button onclick="addShoppingItem()">Add Shopping Item</button>
+        </div>
+
+        <!-- Right Section (Meal Planner) -->
+        <div class="section" id="meal-planner-section">
+            <h2>WEEKLY MEAL PLANNER</h2>
+            <table id="meal-planner-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Lunch</th>
+                        <th>Dinner</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Meal planner rows for each day -->
+                    <tr>
+                        <td>Monday</td>
+                        <td><input type="text" id="monday-lunch"></td>
+                        <td><input type="text" id="monday-dinner"></td>
+                        <td><button onclick="saveRecipe('monday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td><input type="text" id="tuesday-lunch"></td>
+                        <td><input type="text" id="tuesday-dinner"></td>
+                        <td><button onclick="saveRecipe('tuesday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                    <!-- Repeat for the rest of the days (Wednesday to Sunday) -->
+                    <tr>
+                        <td>Wednesday</td>
+                        <td><input type="text" id="wednesday-lunch"></td>
+                        <td><input type="text" id="wednesday-dinner"></td>
+                        <td><button onclick="saveRecipe('wednesday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td><input type="text" id="thursday-lunch"></td>
+                        <td><input type="text" id="thursday-dinner"></td>
+                        <td><button onclick="saveRecipe('thursday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td><input type="text" id="friday-lunch"></td>
+                        <td><input type="text" id="friday-dinner"></td>
+                        <td><button onclick="saveRecipe('friday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td><input type="text" id="saturday-lunch"></td>
+                        <td><input type="text" id="saturday-dinner"></td>
+                        <td><button onclick="saveRecipe('saturday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td><input type="text" id="sunday-lunch"></td>
+                        <td><input type="text" id="sunday-dinner"></td>
+                        <td><button onclick="saveRecipe('sunday')">Save</button><button onclick="deleteRecipe(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="generateWeeklyPlan()">Create Weekly Plan</button>
+            <button id="back-to-recipes-btn" onclick="window.location.href='index.html'">View All Your Recipes</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to add shopping items
+        function addShoppingItem() {
+            let table = document.getElementById('shopping-list-table').getElementsByTagName('tbody')[0];
+            let row = table.insertRow();
+            let itemCell = row.insertCell(0);
+            let amountCell = row.insertCell(1);
+            let actionCell = row.insertCell(2);
+
+            itemCell.innerHTML = `<input type="text" placeholder="Item Name">`;
+            amountCell.innerHTML = `<input type="number" placeholder="Amount in Ksh">`;
+            actionCell.innerHTML = `<button onclick="saveShoppingItem(this)">Save</button> <button onclick="deleteShoppingItem(this)">Delete</button>`;
+        }
+
+        // Function to save shopping item
+        function saveShoppingItem(button) {
+            let row = button.parentElement.parentElement;
+            let item = row.cells[0].querySelector('input').value;
+            let amount = row.cells[1].querySelector('input').value;
+
+            if (item && amount) {
+                button.disabled = true;
+                row.cells[0].innerHTML = item;
+                row.cells[1].innerHTML = amount;
+            } else {
+                alert('Please fill in both fields');
+            }
+        }
+
+        // Function to delete shopping item
+        function deleteShoppingItem(button) {
+            let row = button.parentElement.parentElement;
+            row.remove();
+        }
+
+        // Function to generate a weekly plan
+        function generateWeeklyPlan() {
+            const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+            days.forEach(day => {
+                let lunch = document.getElementById(`${day}-lunch`).value;
+                let dinner = document.getElementById(`${day}-dinner`).value;
+
+                if (lunch && dinner) {
+                    alert(`${day.charAt(0).toUpperCase() + day.slice(1)}: Lunch - ${lunch}, Dinner - ${dinner}`);
+                }
+            });
+        }
+
+        // Function to save recipe for each day
+        function saveRecipe(day) {
+            let lunch = document.getElementById(`${day}-lunch`).value;
+            let dinner = document.getElementById(`${day}-dinner`).value;
+
+            if (lunch && dinner) {
+                alert(`${day.charAt(0).toUpperCase() + day.slice(1)} saved: Lunch - ${lunch}, Dinner - ${dinner}`);
+            } else {
+                alert(`Please fill in both lunch and dinner for ${day}`);
+            }
+        }
+
+        // Function to delete meal row
+        function deleteRecipe(button) {
+            let row = button.parentElement.parentElement;
+            row.remove();
+        }
+    </script>
+
+</body>
+
+</html>

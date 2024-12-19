@@ -1,0 +1,157 @@
+[{
+        "id": 1,
+        "name": "Nyama Choma",
+        "ingredients": ["Beef", "Cooking oil", "Garlic", "Ginger", "Lemon"],
+        "steps": [
+            "Marinate the beef with garlic, ginger, and lemon.",
+            "Skewer the beef and cook on a grill or charcoal."
+        ],
+        "cookingTime": "40 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1604337685510-dc944872e9a0"
+    },
+    {
+        "id": 2,
+        "name": "Sukuma Wiki",
+        "ingredients": ["Sukuma", "Onions", "Tomatoes", "Cooking oil", "Garlic"],
+        "steps": [
+            "Heat oil in a pan and fry onions and garlic.",
+            "Add chopped sukuma and stir until tender."
+        ],
+        "cookingTime": "20 minutes",
+        "difficulty": "Easy",
+        "image": "https://images.unsplash.com/photo-1603052871525-ff9f772c7553"
+    },
+    {
+        "id": 3,
+        "name": "Ugali",
+        "ingredients": ["Maize flour", "Water", "Salt"],
+        "steps": [
+            "Boil water and add salt.",
+            "Slowly add maize flour while stirring until it thickens."
+        ],
+        "cookingTime": "15 minutes",
+        "difficulty": "Easy",
+        "image": "https://images.unsplash.com/photo-1602900992407-22d0b6c7b6b1"
+    },
+    {
+        "id": 4,
+        "name": "Chapati",
+        "ingredients": ["Flour", "Water", "Salt", "Cooking oil"],
+        "steps": [
+            "Mix flour and water to form a dough.",
+            "Roll the dough into flat circles and cook on a heated pan with oil."
+        ],
+        "cookingTime": "30 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1606742229472-71773e585cf2"
+    },
+    {
+        "id": 5,
+        "name": "Mandazi",
+        "ingredients": ["Flour", "Sugar", "Yeast", "Water", "Cooking oil"],
+        "steps": [
+            "Mix flour, sugar, yeast, and water to make dough.",
+            "Shape into triangles and deep fry until golden."
+        ],
+        "cookingTime": "30 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1617124568367-032ad1d51b98"
+    },
+    {
+        "id": 6,
+        "name": "Githeri",
+        "ingredients": ["Maize", "Beans", "Carrots", "Potatoes", "Onions", "Tomatoes"],
+        "steps": [
+            "Cook maize and beans until soft.",
+            "Add chopped carrots, potatoes, onions, and tomatoes. Cook until tender."
+        ],
+        "cookingTime": "1 hour",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1618360297769-0a5da08a4d10"
+    },
+    {
+        "id": 7,
+        "name": "Samosa",
+        "ingredients": ["Flour", "Ground beef", "Onions", "Garlic", "Spices"],
+        "steps": [
+            "Cook the ground beef with onions, garlic, and spices.",
+            "Fold the mixture into triangular pockets and deep fry."
+        ],
+        "cookingTime": "30 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1618192612697-e42cb1d8a2b0"
+    },
+    {
+        "id": 8,
+        "name": "Matoke",
+        "ingredients": ["Green bananas", "Onions", "Tomatoes", "Cooking oil"],
+        "steps": [
+            "Fry onions and tomatoes in oil.",
+            "Add sliced green bananas and cook until soft."
+        ],
+        "cookingTime": "30 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1621895797880-b453ab7f1ca7"
+    },
+    {
+        "id": 9,
+        "name": "Kachumbari",
+        "ingredients": ["Tomatoes", "Onions", "Coriander", "Lemon", "Chili"],
+        "steps": [
+            "Chop tomatoes, onions, and coriander.",
+            "Add lemon juice and chili to taste."
+        ],
+        "cookingTime": "10 minutes",
+        "difficulty": "Easy",
+        "image": "https://images.unsplash.com/photo-1600994990452-9f027f0cb19e"
+    },
+    {
+        "id": 10,
+        "name": "Omena",
+        "ingredients": ["Omena", "Onions", "Tomatoes", "Cooking oil", "Garlic"],
+        "steps": [
+            "Fry omena in oil until crispy.",
+            "Add onions, tomatoes, and garlic, and cook until soft."
+        ],
+        "cookingTime": "30 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1601404681894-72f5c129f14c"
+    },
+    {
+        "id": 11,
+        "name": "Beef Stew",
+        "ingredients": ["Beef", "Onions", "Tomatoes", "Carrots", "Cooking oil"],
+        "steps": [
+            "Brown the beef in oil, then set aside.",
+            "Fry onions, add tomatoes, carrots, and cook until tender."
+        ],
+        "cookingTime": "1 hour",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1584786155314-c6b8fd9c57b0"
+    },
+    {
+        "id": 12,
+        "name": "Kuku Kienyeji",
+        "ingredients": ["Chicken", "Cooking oil", "Tomatoes", "Garlic", "Spices"],
+        "steps": [
+            "Fry chicken until golden brown.",
+            "Add tomatoes, garlic, and spices and simmer."
+        ],
+        "cookingTime": "1 hour",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1596987171726-b85b6a7d0a1d"
+    },
+    {
+        "id": 13,
+        "name": "Pork Chops",
+        "ingredients": ["Pork", "Onions", "Tomatoes", "Spices", "Cooking oil"],
+        "steps": [
+            "Season the pork with spices and fry.",
+            "Add onions and tomatoes, cook until soft."
+        ],
+        "cookingTime": "45 minutes",
+        "difficulty": "Medium",
+        "image": "https://images.unsplash.com/photo-1594500583138-3b1c3cf998f7"
+    }
+]
