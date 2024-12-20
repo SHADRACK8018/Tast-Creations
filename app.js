@@ -7,7 +7,7 @@ const RecipeForm = document.getElementById('recipeForm');
 const CloseFormBtn = document.getElementById('closeFormBtn');
 const AddRecipeBtn = document.getElementById('addRecipeBtn');
 
-// Fetch recipes from db.json (for mock data, replace this with actual fetching)
+// Recipes fetched from db.json
 fetch('db.json')
     .then(response => response.json())
     .then(data => {
@@ -16,7 +16,7 @@ fetch('db.json')
     })
     .catch(err => console.error('Error fetching recipes:', err));
 
-// Add Recipe Button Handler
+// Adding Recipe Button Handler
 addRecipeBtn.addEventListener('click', () => {
     document.getElementById('formTitle').textContent = 'Add a New Recipe';
     recipeForm.reset();
@@ -28,7 +28,7 @@ closeFormBtn.addEventListener('click', () => {
     recipeFormContainer.style.display = 'none';
 });
 
-// Render Recipes on the Page
+// recipes reminder on the Page
 function renderRecipes() {
     recipeList.innerHTML = '';
     recipes.forEach(recipe => {
@@ -46,7 +46,7 @@ function renderRecipes() {
     });
 }
 
-// Add or Update Recipe
+// Adding or Updating Recipe
 recipeForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -69,7 +69,7 @@ recipeForm.addEventListener('submit', (e) => {
     }
 });
 
-// Edit Recipe
+// Editing Recipe
 function RecipeEdit(id) {
     const recipe = recipes.find(r => r.id === id);
     if (recipe) {
@@ -80,7 +80,7 @@ function RecipeEdit(id) {
         document.getElementById('recipeTime').value = recipe.cookingTime;
         recipeFormContainer.style.display = 'flex';
 
-        // Update Recipe on Submit
+        // Updating Recipe on Submit
         recipeForm.onsubmit = (e) => {
             e.preventDefault();
             recipe.name = document.getElementById('recipeName').value;
@@ -94,7 +94,7 @@ function RecipeEdit(id) {
     }
 }
 
-// Delete Recipe
+// Deleting Recipe
 function deleteRecipe(id) {
     recipes = recipes.filter(recipe => recipe.id !== id);
     renderRecipes();
